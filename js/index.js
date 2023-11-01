@@ -27,6 +27,14 @@ const prices = {
   glutenFreeCrust: 5
 }
 
+const buttons = {
+  pepperoni: document.querySelector('.btn.btn-pepperoni'),
+  mushrooms: document.querySelector('.btn.btn-mushrooms'),
+  greenPeppers: document.querySelector('.btn.btn-green-peppers'),
+  whiteSauce: document.querySelector('.btn.btn-sauce'),
+  glutenFreeCrust: document.querySelector('.btn.btn-crust')
+}
+
 // This function takes care of rendering the pizza based on the state
 // This function is triggered once at the beginning and every time the state is changed
 function renderEverything() {
@@ -115,6 +123,10 @@ function renderButtons() {
   } else {
     document.querySelector('.btn.btn-crust').classList.remove('active')
   }
+// Object.entries(state).forEach(([ingredient, value]) => {
+//  buttons[ingredient].classList.toggle('active', value)
+// })
+
 }
 
 function renderPrice() {
